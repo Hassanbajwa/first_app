@@ -12,7 +12,7 @@
 development:
  # <<: *default
   adapter: postgresql
-  database: db/mydatabase_developemnt
+  database: mydatabase_development
   pool: 5
   timeout: 5000
   username: postgres
@@ -22,13 +22,17 @@ development:
 # Do not set this db to the same as development or production.
 test:
   #<<: *default
-  adapter: sqlite3
-  database: db/mydatabase_test
+  adapter: postgresql
+  database: mydatabase_test
   pool: 5
   timeout: 5000
+  username: postgres
+  password: 1234
 production:
   #<<: *default
-  adapter: sqlite3
-  database: db/mydatabase_production
+  adapter: postgresql
+  database: mydatabase_production
   pool: 5
   timeout: 5000
+  username: postgres
+  password: 1234
